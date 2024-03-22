@@ -4,18 +4,18 @@ On this project, I study web scrapping.
 
 The project has the following structure: 
 
-└── src
-    └── class
-    └── scripts
-        └── basics
-            └── oop.py
-            └── program.ipynb
+    └── src
+        └── class
+            └──practice
+        └── scripts
+            └── basics
 
 ## description: 
 - src: as main folder
-- src/class: for main classes to use
-- src/scripts: for specific scripts 
-- src/scripts/basics: for basic building blocks or concepts.
+    - class: for main classes to use
+        - practice: scripts to pratice 
+    - scripts: for class scripts
+    - basics: for basic building blocks or concepts.
 
 ## steps
 
