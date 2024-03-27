@@ -8,6 +8,7 @@ The project has the following structure:
         └── class
             └──practice
                 └──single_page
+                └──multiple_page
         └── scripts
             └── basics
 
