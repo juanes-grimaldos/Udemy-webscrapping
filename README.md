@@ -7,6 +7,7 @@ The project has the following structure:
     └── src
         └── class
             └──practice
+                └──single_page
         └── scripts
             └── basics
 
@@ -14,6 +15,8 @@ The project has the following structure:
 - src: as main folder
     - class: for main classes to use
         - practice: scripts to pratice 
+            - single_page: practice scripts for only one page
+            - multiple_page: practice scripts for horizontal and vertical scrapy
     - scripts: for class scripts
     - basics: for basic building blocks or concepts.
 
