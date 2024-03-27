@@ -125,3 +125,6 @@ dmypy.json
 
 # csv files
 *.csv
+
+# vscode
+.vscode/
