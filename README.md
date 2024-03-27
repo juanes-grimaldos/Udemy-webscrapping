@@ -11,6 +11,7 @@ The project has the following structure:
                 └──multiple_page
         └── scripts
             └── basics
+            └── example
 
 ## description: 
 - src: as main folder
@@ -19,7 +20,8 @@ The project has the following structure:
             - single_page: practice scripts for only one page
             - multiple_page: practice scripts for horizontal and vertical scrapy
     - scripts: for class scripts
-    - basics: for basic building blocks or concepts.
+        - basics: for basic building blocks or concepts.
+        - example: class materials scripts
 
 ## steps
 
