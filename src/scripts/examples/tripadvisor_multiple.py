@@ -66,4 +66,4 @@ class TripAdvisor(CrawlSpider):
         yield item.load_item()
 
 # EJECUCION
-# scrapy runspider 1_tripadvisor.py -o tripadvisor.csv
+# scrapy runspider scripts\examples\tripadvisor_multiple.py -o tripadvisor.csv
