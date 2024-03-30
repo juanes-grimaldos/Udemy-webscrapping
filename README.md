@@ -12,6 +12,7 @@ The project has the following structure:
         └── scripts
             └── basics
             └── example
+            └── scrapy_examples
 
 ## description: 
 - src: as main folder
@@ -22,6 +23,7 @@ The project has the following structure:
     - scripts: for class scripts
         - basics: for basic building blocks or concepts.
         - example: class materials scripts
+        - scrapy_examples: examples for scrapy use only
 
 ## steps
 
