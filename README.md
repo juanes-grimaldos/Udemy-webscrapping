@@ -5,24 +5,24 @@ On this project, I study web scrapping.
 The project has the following structure: 
 
     └── src
-        └── class
-            └──practice
-                └──single_page
-                └──multiple_page
+        └──guides
+        └──practice
+            └──single_page
+            └──multiple_page
         └── scripts
             └── basics
-            └── example
+            └── bs4_and_requests
             └── scrapy_examples
 
 ## description: 
 - src: as main folder
-    - class: for main classes to use
-        - practice: scripts to pratice 
-            - single_page: practice scripts for only one page
-            - multiple_page: practice scripts for horizontal and vertical scrapy
+    - guides: class material, not code
+    - practice: scripts to pratice 
+        - single_page: practice scripts for only one page
+        - multiple_page: practice scripts for horizontal and vertical scrapy
     - scripts: for class scripts
         - basics: for basic building blocks or concepts.
-        - example: class materials scripts
+        - bs4_and_requests: class materials scripts for request and Beautiful Soup 4
         - scrapy_examples: examples for scrapy use only
 
 ## steps
