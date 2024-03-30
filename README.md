@@ -33,3 +33,6 @@ The project has the following structure:
 - 4: extract response from URL
 - 5: get back to step 2 with more URLs
 
+
+## original scripts
+all content and material are thanks to [Ikuffo web scraping course on Udemy](https://github.com/lkuffo/web-scraping)
