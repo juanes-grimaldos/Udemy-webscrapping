@@ -30,7 +30,7 @@ driver.get('https://www.kayak.com.co/flights/BOG-TPA/2024-04-29/2024-05-06?'
 output = {}
 item_reduction = [0]
 
-for i in range(3):
+for i in range(8):
     flight_list_count = WebDriverWait(driver, 10).until(
         EC.presence_of_all_elements_located(
             (By.XPATH, "//div[@data-resultid]/"
