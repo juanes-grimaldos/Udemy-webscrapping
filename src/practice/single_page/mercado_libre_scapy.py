@@ -38,7 +38,7 @@ class KayakSpider(Spider):
 
 
 # EJECUCION EN TERMINAL:
-# scrapy runspider class/practice/single_page/mercado_libre_script.py -o resultados.csv
+# scrapy runspider class/practice/single_page/mercado_libre_scrapy.py -o resultados.csv
 
 
 if __name__ == "__main__":
