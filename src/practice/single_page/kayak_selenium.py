@@ -7,7 +7,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import csv
+"""
+Este es un ejemplo de web scraping con Selenium en la página de Kayak
 
+En este ejemplo vemos como extraer los precios e interactuar con un botón
+de "ver más" en la página de Kayak para obtener más resultados.
+"""
 
 # Asi podemos setear el user-agent en selenium
 opts = Options()
