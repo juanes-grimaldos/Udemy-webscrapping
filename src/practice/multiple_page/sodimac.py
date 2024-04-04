@@ -23,7 +23,7 @@ vemos paginación para obtener los items de cemento, se obtiene precio y nombre
 opts = Options()
 opts.add_argument(
     "user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36")
 opts.add_argument("--headless")
 
 driver = webdriver.Chrome(
