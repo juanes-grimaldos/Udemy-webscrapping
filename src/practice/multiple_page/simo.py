@@ -1,6 +1,8 @@
 import requests
 import logging
 import json
+import random
+from time import sleep
 """
 En este script se hace una extracción de los datos del Servicio Nacional 
 Civil para la contratación de un profesional universitario en el departamento
@@ -10,7 +12,7 @@ de Bogotá, Colombia.
 logging.basicConfig(level=logging.INFO)
 
 headers = {
-  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0',
+  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
   'Accept': 'application/javascript, application/json',
   'Accept-Language': 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3',
   'Accept-Encoding': 'gzip, deflate, br, identity',
@@ -50,9 +52,11 @@ while data:
         loop_range = len(data)
         for i in range(loop_range):
             output.append({
+                "id_opec": data[i]['id'],
                 "job_tenure": data[i]['empleo']['requisitosMinimos'][0]['experiencia'],
                 "academic_background": data[i]['empleo']['requisitosMinimos'][0]['estudio'],
                 "company": data[i]['empleo']['convocatoria']['nombre'],
+                "salary": data[i]['empleo']['asignacionSalarial'],
                 "process_type": data[i]['empleo']['convocatoria']['tipoProceso']
             })
 
@@ -61,6 +65,7 @@ while data:
         with open('output.json', 'w') as file:
             json.dump(output, file)
         break
-
+    sleep_time = random.randint(1, 5)
+    sleep(sleep_time)
     logging.info(f"Page {page} successfully scraped.")
     page += 1   
