@@ -131,3 +131,6 @@ dmypy.json
 
 # .json
 *.json
+
+# database
+*.db
