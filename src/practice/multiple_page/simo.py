@@ -3,6 +3,7 @@ import logging
 import json
 import random
 from time import sleep
+import sqlite3
 """
 En este script se hace una extracción de los datos del Servicio Nacional 
 Civil para la contratación de un profesional universitario en el departamento
@@ -35,18 +36,17 @@ payload = {}
 url_base = "https://simo.cnsc.gov.co/empleos/ofertaPublica/?"
 search_bar = "search_palabraClave=profesional%20universitario&"
 data = [{'ok':0}]
-page = 0
+page = 35
 output = []
 
 while data:
-    parm = ("search_convocatoria=&search_entidad=&"
+    parm = ("search_convocatoria=752663326&search_entidad=&"
             "search_departamento=6&search_nivel=3"
             "&search_salario=&search_municipio=144"
             f"&search_numeroOPEC=&page={page}&size=10")
     url = url_base + search_bar + parm
 
     response = requests.request("GET", url, headers=headers, data=payload)
-    response.json()
     data = response.json()
     if data:
         loop_range = len(data)
@@ -64,6 +64,24 @@ while data:
         # Store output as JSON file
         with open('output.json', 'w') as file:
             json.dump(output, file)
+
+        # Store output in SQLite database
+
+        conn = sqlite3.connect('output.db')
+        c = conn.cursor()
+
+        # Create table
+        c.execute('''CREATE TABLE IF NOT EXISTS job_data
+                 (id_opec INTEGER, job_tenure TEXT, academic_background TEXT, company TEXT, salary TEXT, process_type TEXT)''')
+
+        # Insert data into table
+        for item in output:
+            c.execute("INSERT INTO job_data VALUES (?, ?, ?, ?, ?, ?)",
+                  (item['id_opec'], item['job_tenure'], item['academic_background'], item['company'], item['salary'], item['process_type']))
+
+        # Commit changes and close connection
+        conn.commit()
+        conn.close()
         break
     sleep_time = random.randint(1, 5)
     sleep(sleep_time)
